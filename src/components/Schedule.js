@@ -13,22 +13,22 @@ import "./Schedule.css";
 function Schedule() {
   const items = [
     {
-      image: "https://cdn.glitch.com/fe1c1ab8-d567-49ec-93a3-b5aa5437dd9e%2Foptick.png",
       header: "Mở bán vé",
-      description: "Description",
-      meta: "Oct 10 - Oct 31",
+      description: "Description Mở bán vé",
+      time: "00:00 AM",
+      date: "Oct 01 2020 - Oct 30 2020",
     },
     {
-      image: "https://cdn.glitch.com/fe1c1ab8-d567-49ec-93a3-b5aa5437dd9e%2Fcheckin.png",
       header: "Check-in",
-      description: "Description",
-      meta: "12:00 - 19:00 ( 29 / 11 )",
+      description: "Description Check-in",
+      time: "17:00 - 19:00",
+      date: "Dec 05 2020",
     },
     {
-      image: "https://cdn.glitch.com/fe1c1ab8-d567-49ec-93a3-b5aa5437dd9e%2Fclock.svg",
       header: "Xem biểu diễn",
-      description: "Description",
-      meta: "19:30 - ô vờ lai ( 31/11 )",
+      description: "Description Xem biểu diễn",
+      time: "19:00 PM",
+      date: "Dec 05 2020",
     },
   ];
   return (
@@ -37,6 +37,8 @@ function Schedule() {
       vertical
       padded="very"
       style={{
+        background:"linear-gradient(#000000,rgba(0, 0, 0, 0.2)),url(img/lich.jpg)",
+        backgroundSize:"cover",
       }}
     >
       <Header sub textAlign="center" className="section-header">
@@ -47,29 +49,37 @@ function Schedule() {
           <Icon name="calendar outline" />
         </Divider>
       </Container>
-      <Container>
-        <Grid>
+      <Container style={{
+        marginTop:"5px",
+        paddingRight: "15px",
+        paddingLeft: "15px"}}>
+        <Grid.Row>
+          <div className="col-md-10">
+            <ul className="cbp_tmtimeline" style={{marginTop:" 20px"}}>
           {items.map((item, index) => (
-            <Grid.Row key={index}>
-              <Grid.Column width={4}>
-                <Image src={item.image} />
-              </Grid.Column>
-              <Grid.Column width={9} verticalAlign="middle" textAlign="left">
-                <Header inverted size="huge">
+            <li key={index}>
+              <time className="cbp_tmtime">
+                <span>{item.time}</span>
+                <span>{item.date}</span>
+              </time>
+              <div className="cbp_tmicon bg-info">
+                <Icon name="time" />
+              </div>
+              <div className="cbp_tmlabel">
+                <Header size="huge">
                   {item.header}
                 </Header>
-                <Header inverted sub>
-                  <Icon name="time" /> {item.meta}
-                </Header>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-                tenetur similique quasi nulla nemo sit dicta voluptatibus nobis
-                id fuga. Aliquam, dolor animi maxime magnam quasi sit a eius
-                consequuntur!
+                  <p>
+                  {item.description}
+                  </p>
+                
                 {/* {item.description} */}
-              </Grid.Column>
-            </Grid.Row>
+              </div>
+            </li>
           ))}
-        </Grid>
+            </ul>
+          </div>
+        </Grid.Row>
       </Container>
     </Segment>
   );

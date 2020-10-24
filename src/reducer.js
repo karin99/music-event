@@ -47,12 +47,12 @@ export const getTicketType = async (ticketType = [], id = null) => {
     return [
       {
         id: "Ktlfada4M0hUSQXzmdj5",
-        name: "Vé Thường",
+        name: "Vé Loại 1",
         price: 5000000,
       },
       {
         id: "rMlDTF1E3K0ucGl4cgMz",
-        name: "Vé V.I.P",
+        name: "Vé Loại 2",
         price: 400000,
       },
     ];

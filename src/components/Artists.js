@@ -18,15 +18,15 @@ function Artists() {
     },
     {
       image:
-        "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png",
+        "img/lyly.jpg",
     },
     {
       image:
-        "https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/122433880_2449305778703042_4677206744975216522_n.png?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=KOXKcXXPx9gAX8Drt-i&_nc_ht=scontent.fsgn2-2.fna&oh=6110714a782313a38dc6684172737e53&oe=5FB9B07B",
+        "img/dung.jpg",
     },
     {
       image:
-        "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png",
+        "img/vu.jpg",
     },
     {
       image:

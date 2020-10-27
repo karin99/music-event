@@ -8,7 +8,7 @@ import {
 import "./Faq.css";
 
 export default class AccordionExampleFluid extends Component {
-  state = { activeIndex: 0 }
+  state = { activeIndex: 9 }
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps
